@@ -55,7 +55,6 @@ async function recupURLMichelin() {
         var $ = cheerio.load(html);
 
         const tab = $('.poi_card-display-title').get();
-
         for (element of tab) {
             var url = $(element).parent().parent().parent().attr('href');
             var urlComplet = 'https://restaurant.michelin.fr' + url;
